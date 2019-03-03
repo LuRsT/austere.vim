@@ -4,7 +4,7 @@
 " Maintainer:   Gil Goncalves @lurst
 " Website:      https://github.com/LuRsT/austere.vim
 " License:      MIT License
-" Last Updated: Sun 03 Mar 2019 19:55:27 GMT
+" Last Updated: Sun 03 Mar 2019 20:41:57 GMT
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -79,7 +79,7 @@ hi! link Boolean Constant
 hi! link Character Constant
 hi Comment ctermfg=244 ctermbg=NONE guifg=#7c7c7c guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Conditional Statement
-hi Constant ctermfg=245 ctermbg=NONE guifg=#8e8e8e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Constant ctermfg=245 ctermbg=NONE guifg=#8e8e8e guibg=NONE guisp=NONE cterm=NONE,italic gui=NONE,italic
 hi! link Define PreProc
 hi! link Debug Special
 hi! link Delimiter Special
@@ -154,8 +154,8 @@ finish
 "     Terminal         almostwhite             none
 "     Normal           almostwhite             black
 "     Terminal         almostwhite             black
-" ColorColumn          fg                 black
-" Conceal              none               none
+" ColorColumn          fg                       black
+" Conceal              none                     none
 " Cursor               almostwhite              black
 " CursorColumn         almostwhite              black
 " CursorLine           almostwhite              black
@@ -168,7 +168,7 @@ finish
 " EndOfBuffer          almostwhite              black
 " ErrorMsg             red                      black             reverse
 " FoldColumn           almostwhite              darkgrey
-" Folded               almostwhite              darkgrey             italic
+" Folded               almostwhite              darkgrey          italic
 " IncSearch            beige                    black             bold
 " LineNr               almostwhite              black
 " MatchParen           almostwhite              black
@@ -195,7 +195,7 @@ finish
 " TabLine              almostwhite              black
 " TabLineFill          almostwhite              black
 " TabLineSel           almostwhite              black
-" Title                darkstone                    black
+" Title                darkstone                black
 " VertSplit            black                    black
 " Visual               almostwhite              darkgrey
 " VisualNOS            almostwhite              darkgrey
@@ -203,17 +203,17 @@ finish
 " WildMenu             almostwhite              black
 " Boolean           -> Constant
 " Character         -> Constant
-" Comment              darkstone              none
+" Comment              darkstone                none
 " Conditional       -> Statement
-" Constant             grey              none
+" Constant             grey                     none              italic
 " Define            -> PreProc
 " Debug             -> Special
 " Delimiter         -> Special
-" Error                red               black             reverse
+" Error                red                      black             reverse
 " Exception         -> Statement
 " Float             -> Constant
 " Function          -> Identifier
-" Identifier           almostwhite                    none
+" Identifier           almostwhite              none
 " Ignore               almostwhite              none
 " Include           -> PreProc
 " Keyword           -> Statement
@@ -222,12 +222,12 @@ finish
 " Number            -> Constant
 " Operator          -> Statement
 " PreCondit         -> PreProc
-" PreProc              grey              none
+" PreProc              grey                     none
 " Repeat            -> Statement
 " Special              almostwhite              none
 " SpecialChar       -> Special
 " SpecialComment    -> Special
-" Statement            grey                    none
+" Statement            grey                     none
 " StorageClass      -> Type
 " String            -> Constant
 " Structure         -> Type
@@ -235,21 +235,21 @@ finish
 " Todo                 almostwhite              none
 " Type                 almostwhite              none
 " Typedef           -> Type
-" Underlined           grey             none
+" Underlined           grey                     none
 " lCursor           -> Cursor
 " CursorIM             none              fg
-" ToolbarLine          none              black
+" ToolbarLine          none                     black
 " ToolbarButton        almostwhite              black             bold
-" diffAdded           green              black
-" diffRemoved         red                black
-" CtrlPPrtText        green              black
-" CtrlPMatch          green              black
-" CtrlPPrtBase        green              black
-" CtrlPLinePre        yellow             black
-" CtrlPPrtCursor      yellow             black
-" mkdItalic           grey               black
-" mkdCode             grey               black
-" mkdSnippetSH        grey               black
+" diffAdded           green                     black
+" diffRemoved         red                       black
+" CtrlPPrtText        green                     black
+" CtrlPMatch          green                     black
+" CtrlPPrtBase        green                     black
+" CtrlPLinePre        yellow                    black
+" CtrlPPrtCursor      yellow                    black
+" mkdItalic           grey                      black
+" mkdCode             grey                      black
+" mkdSnippetSH        grey                      black
 " NERDTreeFile        almostwhite               black
 " NERDTreeExecFile    almostwhite               black
 " pythonStatement     white              black             bold

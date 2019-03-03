@@ -52,8 +52,8 @@ endif
 endverbatim
 
 # Group              Foreground        Background        Attributes
-ColorColumn          fg                 black
-Conceal              none               none
+ColorColumn          fg                       black
+Conceal              none                     none
 Cursor               almostwhite              black
 CursorColumn         almostwhite              black
 CursorLine           almostwhite              black
@@ -66,7 +66,7 @@ Directory            almostwhite              black
 EndOfBuffer          almostwhite              black
 ErrorMsg             red                      black             reverse
 FoldColumn           almostwhite              darkgrey
-Folded               almostwhite              darkgrey             italic
+Folded               almostwhite              darkgrey          italic
 IncSearch            beige                    black             bold
 LineNr               almostwhite              black
 MatchParen           almostwhite              black
@@ -93,7 +93,7 @@ StatusLineTermNC  -> StatusLineNC
 TabLine              almostwhite              black
 TabLineFill          almostwhite              black
 TabLineSel           almostwhite              black
-Title                darkstone                    black
+Title                darkstone                black
 VertSplit            black                    black
 Visual               almostwhite              darkgrey
 VisualNOS            almostwhite              darkgrey
@@ -102,17 +102,17 @@ WildMenu             almostwhite              black
 # Other conventional group names (see `:help group-name`)
 Boolean           -> Constant
 Character         -> Constant
-Comment              darkstone              none
+Comment              darkstone                none
 Conditional       -> Statement
-Constant             grey              none
+Constant             grey                     none              italic
 Define            -> PreProc
 Debug             -> Special
 Delimiter         -> Special
-Error                red               black             reverse
+Error                red                      black             reverse
 Exception         -> Statement
 Float             -> Constant
 Function          -> Identifier
-Identifier           almostwhite                    none
+Identifier           almostwhite              none
 Ignore               almostwhite              none
 Include           -> PreProc
 Keyword           -> Statement
@@ -121,12 +121,12 @@ Macro             -> PreProc
 Number            -> Constant
 Operator          -> Statement
 PreCondit         -> PreProc
-PreProc              grey              none
+PreProc              grey                     none
 Repeat            -> Statement
 Special              almostwhite              none
 SpecialChar       -> Special
 SpecialComment    -> Special
-Statement            grey                    none
+Statement            grey                     none
 StorageClass      -> Type
 String            -> Constant
 Structure         -> Type
@@ -134,33 +134,33 @@ Tag               -> Special
 Todo                 almostwhite              none
 Type                 almostwhite              none
 Typedef           -> Type
-Underlined           grey             none
+Underlined           grey                     none
 # See `:help lCursor`
 lCursor           -> Cursor
 # See `:help CursorIM`
 CursorIM             none              fg
 # See `:help window-toolbar`
-ToolbarLine          none              black
+ToolbarLine          none                     black
 ToolbarButton        almostwhite              black             bold
 # }}}
 
 # Additional highlight groups {{{
 
 # Git Commit specific
-diffAdded           green              black
-diffRemoved         red                black
+diffAdded           green                     black
+diffRemoved         red                       black
 
 # Ctrl-p specific
-CtrlPPrtText        green              black
-CtrlPMatch          green              black
-CtrlPPrtBase        green              black
-CtrlPLinePre        yellow             black
-CtrlPPrtCursor      yellow             black
+CtrlPPrtText        green                     black
+CtrlPMatch          green                     black
+CtrlPPrtBase        green                     black
+CtrlPLinePre        yellow                    black
+CtrlPPrtCursor      yellow                    black
 
 # Markdown specific
-mkdItalic           grey               black
-mkdCode             grey               black
-mkdSnippetSH        grey               black
+mkdItalic           grey                      black
+mkdCode             grey                      black
+mkdSnippetSH        grey                      black
 
 # NERDTree specific
 NERDTreeFile        almostwhite               black
