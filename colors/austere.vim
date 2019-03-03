@@ -1,169 +1,264 @@
-" vim:fdm=marker
-" Vim Color File
-" Name:       austere.vim
-" Maintainer: https://github.com/lurst
-" License:    The MIT License (MIT)
+" Name:         Austere
+" Description:  An austere colorscheme for vim
+" Author:       Gil Goncalves @lurst
+" Maintainer:   Gil Goncalves @lurst
+" Website:      https://github.com/LuRsT/austere.vim
+" License:      MIT License
+" Last Updated: Sun 03 Mar 2019 19:55:27 GMT
 
-" This the austere theme. It is mostly monochrome except for a few things.
-
-
-"""""""""""""""""""""""[ Init ]
+if !(has('termguicolors') && &termguicolors) && !has('gui_running')
+      \ && (!exists('&t_Co') || &t_Co < 256)
+  echoerr '[Austere] There are not enough colors.'
+  finish
+endif
 
 set background=dark
 
-if exists("syntax on")
+hi clear
+if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = "austere"
+let g:colors_name = 'austere'
 
+if !has('gui_running') && get(g:, 'dark_transp_bg', 0)
+  hi Normal ctermfg=250 ctermbg=NONE guifg=#b9b9b9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi Terminal ctermfg=250 ctermbg=NONE guifg=#b9b9b9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+else
+  hi Normal ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+  hi Terminal ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+endif
+hi ColorColumn ctermfg=fg ctermbg=233 guifg=fg guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi Conceal ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Cursor ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi CursorColumn ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi CursorLine ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi CursorLineNr ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi DiffAdd ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi DiffChange ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi DiffDelete ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi DiffText ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
+hi Directory ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi EndOfBuffer ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi ErrorMsg ctermfg=167 ctermbg=233 guifg=#ce5252 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi FoldColumn ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+hi Folded ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE,italic gui=NONE,italic
+hi IncSearch ctermfg=254 ctermbg=233 guifg=#e3e3e3 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi LineNr ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi MatchParen ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi ModeMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi MoreMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi NonText ctermfg=254 ctermbg=NONE guifg=#e3e3e3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Pmenu ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi PmenuSbar ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi PmenuSel ctermfg=245 ctermbg=233 guifg=#8e8e8e guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi PmenuThumb ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi Question ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi! link QuickFixLine Search
+hi Search ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi SignColumn ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi SpecialKey ctermfg=254 ctermbg=233 guifg=#e3e3e3 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi SpellBad ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=#ce5252 cterm=NONE gui=NONE
+hi SpellCap ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=#5f819d cterm=NONE gui=NONE
+hi SpellLocal ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=#7c7c7c cterm=NONE gui=NONE
+hi SpellRare ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=#e3e3e3 cterm=NONE,reverse gui=NONE,reverse
+hi StatusLine ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi StatusLineNC ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi! link StatusLineTerm StatusLine
+hi! link StatusLineTermNC StatusLineNC
+hi TabLine ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi TabLineFill ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi TabLineSel ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi Title ctermfg=244 ctermbg=233 guifg=#7c7c7c guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi VertSplit ctermfg=233 ctermbg=233 guifg=#101010 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi Visual ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+hi VisualNOS ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+hi WarningMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi WildMenu ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi! link Boolean Constant
+hi! link Character Constant
+hi Comment ctermfg=244 ctermbg=NONE guifg=#7c7c7c guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link Conditional Statement
+hi Constant ctermfg=245 ctermbg=NONE guifg=#8e8e8e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link Define PreProc
+hi! link Debug Special
+hi! link Delimiter Special
+hi Error ctermfg=167 ctermbg=233 guifg=#ce5252 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi! link Exception Statement
+hi! link Float Constant
+hi! link Function Identifier
+hi Identifier ctermfg=250 ctermbg=NONE guifg=#b9b9b9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Ignore ctermfg=250 ctermbg=NONE guifg=#b9b9b9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link Include PreProc
+hi! link Keyword Statement
+hi! link Label Statement
+hi! link Macro PreProc
+hi! link Number Constant
+hi! link Operator Statement
+hi! link PreCondit PreProc
+hi PreProc ctermfg=245 ctermbg=NONE guifg=#8e8e8e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link Repeat Statement
+hi Special ctermfg=250 ctermbg=NONE guifg=#b9b9b9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link SpecialChar Special
+hi! link SpecialComment Special
+hi Statement ctermfg=245 ctermbg=NONE guifg=#8e8e8e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link StorageClass Type
+hi! link String Constant
+hi! link Structure Type
+hi! link Tag Special
+hi Todo ctermfg=250 ctermbg=NONE guifg=#b9b9b9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Type ctermfg=250 ctermbg=NONE guifg=#b9b9b9 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link Typedef Type
+hi Underlined ctermfg=245 ctermbg=NONE guifg=#8e8e8e guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi! link lCursor Cursor
+hi CursorIM ctermfg=NONE ctermbg=fg guifg=NONE guibg=fg guisp=NONE cterm=NONE gui=NONE
+hi ToolbarLine ctermfg=NONE ctermbg=233 guifg=NONE guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi ToolbarButton ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi diffAdded ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi diffRemoved ctermfg=167 ctermbg=233 guifg=#ce5252 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi CtrlPPrtText ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi CtrlPMatch ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi CtrlPPrtBase ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi CtrlPLinePre ctermfg=222 ctermbg=233 guifg=#f0c674 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi CtrlPPrtCursor ctermfg=222 ctermbg=233 guifg=#f0c674 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi mkdItalic ctermfg=245 ctermbg=233 guifg=#8e8e8e guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi mkdCode ctermfg=245 ctermbg=233 guifg=#8e8e8e guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi mkdSnippetSH ctermfg=245 ctermbg=233 guifg=#8e8e8e guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi NERDTreeFile ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi NERDTreeExecFile ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi pythonStatement ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi pythonConditional ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi pythonRepeat ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi pythonOperator ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi pythonException ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi pythonInclude ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi pythonAsync ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi pythonEscape ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi pythonBuiltin ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi pythonFunction ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+finish
 
-"""""""""""""""""""""""[ Color Index ]
-
-" 1     Red
-" 2     Green
-" 4     Blue
-" 214   Yellow
-"
-" 235   Black
-" 240   Dark Dark Grey
-" 245   Dark Grey
-" 250   Grey
-" 255   Light Grey
-" 260   White
-
-
-"""""""""""""""""""""""[ Actual scheme ]
-
-" Greys
-hi Normal              ctermfg=250  ctermbg=235  cterm=NONE
-hi NonText             ctermfg=235  ctermbg=NONE cterm=NONE
-hi Special             ctermfg=250  ctermbg=NONE cterm=NONE
-hi Constant            ctermfg=250  ctermbg=NONE cterm=NONE
-hi htmlTagName         ctermfg=250  ctermbg=NONE cterm=NONE
-hi Identifier          ctermfg=240  ctermbg=NONE cterm=NONE
-hi Boolean             ctermfg=245  ctermbg=NONE cterm=bold
-hi Type                ctermfg=250  ctermbg=NONE cterm=NONE
-hi Function            ctermfg=255  ctermbg=NONE cterm=NONE
-hi Repeat              ctermfg=245  ctermbg=NONE cterm=NONE
-hi linenr              ctermfg=240  ctermbg=235  cterm=NONE
-hi Visual              ctermfg=235  ctermbg=250  cterm=NONE
-hi SpecialKey          ctermfg=235  ctermbg=NONE cterm=NONE
-hi MatchParen          ctermfg=250  ctermbg=245  cterm=NONE
-
-hi ColorColumn         ctermfg=NONE ctermbg=236  cterm=NONE
-hi Cursor              ctermfg=NONE ctermbg=NONE cterm=NONE
-hi CursorLine          ctermfg=NONE ctermbg=235  cterm=NONE
-hi CursorLineNR        ctermfg=250  ctermbg=NONE cterm=NONE
-hi VertSplit           ctermfg=235  ctermbg=235  cterm=NONE
-hi SignColumn          ctermfg=235  ctermbg=235  cterm=NONE
-
-" Search when cursor is on word
-hi IncSearch           ctermfg=250  ctermbg=NONE cterm=NONE
-
-hi Search              ctermfg=2    ctermbg=NONE cterm=NONE
-
-hi Comment             ctermfg=240  ctermbg=NONE cterm=italic
-hi Statement           ctermfg=255  ctermbg=NONE cterm=NONE
-hi String              ctermfg=231  ctermbg=NONE cterm=italic
-hi Number              ctermfg=255  ctermbg=NONE cterm=NONE
-
-hi TODO                ctermfg=255  ctermbg=NONE cterm=italic
-hi Operator            ctermfg=255  ctermbg=NONE cterm=NONE
-
-hi Error               ctermfg=1    ctermbg=NONE cterm=NONE
-
-" Autocomplete menu
-hi Pmenu               ctermfg=250  ctermbg=235  cterm=NONE
-hi PmenuSel            ctermfg=235  ctermbg=250  cterm=NONE
-
-hi PreProc             ctermfg=245  ctermbg=NONE cterm=NONE
-
-" Other
-hi Title               ctermfg=255  ctermbg=NONE cterm=bold
-hi WildMenu            ctermfg=255  ctermbg=NONE cterm=NONE
-hi Underlined          ctermfg=255  ctermbg=NONE cterm=underline
-hi Directory           ctermfg=255  ctermbg=NONE cterm=underline
-hi ErrorMsg            ctermfg=1    ctermbg=NONE cterm=underline
-
-
-"""""""""""""""""""""""[ Plugin specific ]
-
-" # Python Specific
-" False None True
-" lambda nonlocal pass print return with yield
-" class def nextgroup=pythonFunction skipwhite
-" as assert break continue del exec global
-hi pythonStatement     ctermfg=255  ctermbg=NONE cterm=bold
-" elif else if
-hi pythonConditional   ctermfg=255  ctermbg=NONE cterm=bold
-" for while
-hi pythonRepeat        ctermfg=255  ctermbg=NONE cterm=bold
-" and in is not or
-hi pythonOperator      ctermfg=255  ctermbg=NONE cterm=bold
-" except finally raise try
-hi pythonException     ctermfg=255  ctermbg=NONE cterm=bold
-" from import
-hi pythonInclude       ctermfg=255  ctermbg=NONE cterm=bold
-" async await
-hi pythonAsync         ctermfg=255  ctermbg=NONE cterm=bold
-" \
-hi pythonEscape        ctermfg=255  ctermbg=NONE cterm=bold
-" bool str
-hi pythonBuiltin       ctermfg=255  ctermbg=NONE cterm=bold
-hi pythonFunction      ctermfg=255  ctermbg=NONE cterm=bold
-
-" # Git Commit specific
-hi diffAdded           ctermfg=2    ctermbg=NONE cterm=bold
-hi diffRemoved         ctermfg=1    ctermbg=NONE cterm=bold
-
-" Ctrl-p specific
-hi CtrlPPrtText        ctermfg=2    ctermbg=NONE cterm=NONE
-hi CtrlPMatch          ctermfg=2    ctermbg=NONE cterm=NONE
-hi CtrlPPrtBase        ctermfg=2    ctermbg=NONE cterm=italic
-hi CtrlPLinePre        ctermfg=5    ctermbg=245  cterm=NONE
-hi CtrlPPrtCursor      ctermfg=5    ctermbg=NONE cterm=NONE
-
-" Markdown specific
-hi mkdItalic           ctermfg=255  ctermbg=NONE cterm=italic
-hi mkdCode             ctermfg=255  ctermbg=NONE cterm=NONE
-hi mkdSnippetSH        ctermfg=255  ctermbg=NONE cterm=italic
-
-" NERDTree specific
-hi NERDTreeFile        ctermfg=245  ctermbg=NONE cterm=NONE
-hi NERDTreeExecFile    ctermfg=245  ctermbg=NONE cterm=NONE
-
-" NERDTrees File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg)
-    exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg
-    exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-" Filetypes and their colors
-call NERDTreeHighlightFile('py',  2, 'none')
-
-
-"""""""""""""""""""""""[ Highlight links ]
-
-hi link character       constant
-hi link number          constant
-hi link boolean         constant
-hi link Float           Number
-hi link Conditional     Repeat
-hi link Label           Statement
-hi link Keyword         Statement
-hi link Exception       Statement
-hi link Include         PreProc
-hi link Define          PreProc
-hi link Macro           PreProc
-hi link PreCondit       PreProc
-hi link StorageClass    Type
-hi link Structure       Type
-hi link Typedef         Type
-hi link htmlTag         Special
-hi link Tag             Special
-hi link SpecialChar     Special
-hi link Delimiter       Special
-hi link SpecialComment  Special
-hi link Debug           Special
-hi link NERDTreeDir     Special
+" Background: dark
+" Color: black         #101010 ~
+" Color: darkgrey      #252525 ~
+" Color: darkstone     #7c7c7c ~
+" Color: almostwhite   #b9b9b9 ~
+" Color: grey          #8e8e8e ~
+" Color: white         #f7f7f7 ~
+" Color: beige         #e3e3e3 ~
+" Color: red           #ce5252 ~
+" color: green         #8c9440 ~
+" Color: blue          #5f819d ~
+" Color: yellow        #f0c674 ~
+"     Normal           almostwhite             none
+"     Terminal         almostwhite             none
+"     Normal           almostwhite             black
+"     Terminal         almostwhite             black
+" ColorColumn          fg                 black
+" Conceal              none               none
+" Cursor               almostwhite              black
+" CursorColumn         almostwhite              black
+" CursorLine           almostwhite              black
+" CursorLineNr         almostwhite              black
+" DiffAdd              almostwhite              black             reverse
+" DiffChange           almostwhite              black             reverse
+" DiffDelete           almostwhite              black             reverse
+" DiffText             almostwhite              black             bold,reverse
+" Directory            almostwhite              black
+" EndOfBuffer          almostwhite              black
+" ErrorMsg             red                      black             reverse
+" FoldColumn           almostwhite              darkgrey
+" Folded               almostwhite              darkgrey             italic
+" IncSearch            beige                    black             bold
+" LineNr               almostwhite              black
+" MatchParen           almostwhite              black
+" ModeMsg              almostwhite              black
+" MoreMsg              almostwhite              black
+" NonText              beige                     none
+" Pmenu                almostwhite              black
+" PmenuSbar            almostwhite              black
+" PmenuSel             grey                     black
+" PmenuThumb           almostwhite              black
+" Question             almostwhite              black
+" QuickFixLine     ->  Search
+" Search               green                    black
+" SignColumn           almostwhite              black
+" SpecialKey           beige                    black
+" SpellBad             almostwhite              black             s=red
+" SpellCap             almostwhite              black             s=blue
+" SpellLocal           almostwhite              black             s=darkstone
+" SpellRare            almostwhite              black             s=beige reverse
+" StatusLine           almostwhite              black
+" StatusLineNC         almostwhite              black
+" StatusLineTerm    -> StatusLine
+" StatusLineTermNC  -> StatusLineNC
+" TabLine              almostwhite              black
+" TabLineFill          almostwhite              black
+" TabLineSel           almostwhite              black
+" Title                darkstone                    black
+" VertSplit            black                    black
+" Visual               almostwhite              darkgrey
+" VisualNOS            almostwhite              darkgrey
+" WarningMsg           almostwhite              black
+" WildMenu             almostwhite              black
+" Boolean           -> Constant
+" Character         -> Constant
+" Comment              darkstone              none
+" Conditional       -> Statement
+" Constant             grey              none
+" Define            -> PreProc
+" Debug             -> Special
+" Delimiter         -> Special
+" Error                red               black             reverse
+" Exception         -> Statement
+" Float             -> Constant
+" Function          -> Identifier
+" Identifier           almostwhite                    none
+" Ignore               almostwhite              none
+" Include           -> PreProc
+" Keyword           -> Statement
+" Label             -> Statement
+" Macro             -> PreProc
+" Number            -> Constant
+" Operator          -> Statement
+" PreCondit         -> PreProc
+" PreProc              grey              none
+" Repeat            -> Statement
+" Special              almostwhite              none
+" SpecialChar       -> Special
+" SpecialComment    -> Special
+" Statement            grey                    none
+" StorageClass      -> Type
+" String            -> Constant
+" Structure         -> Type
+" Tag               -> Special
+" Todo                 almostwhite              none
+" Type                 almostwhite              none
+" Typedef           -> Type
+" Underlined           grey             none
+" lCursor           -> Cursor
+" CursorIM             none              fg
+" ToolbarLine          none              black
+" ToolbarButton        almostwhite              black             bold
+" diffAdded           green              black
+" diffRemoved         red                black
+" CtrlPPrtText        green              black
+" CtrlPMatch          green              black
+" CtrlPPrtBase        green              black
+" CtrlPLinePre        yellow             black
+" CtrlPPrtCursor      yellow             black
+" mkdItalic           grey               black
+" mkdCode             grey               black
+" mkdSnippetSH        grey               black
+" NERDTreeFile        almostwhite               black
+" NERDTreeExecFile    almostwhite               black
+" pythonStatement     white              black             bold
+" pythonConditional   white              black             bold
+" pythonRepeat        white              black             bold
+" pythonOperator      white              black             bold
+" pythonException     white              black             bold
+" pythonInclude       white              black             bold
+" pythonAsync         white              black             bold
+" pythonEscape        white              black             bold
+" pythonBuiltin       white              black             bold
+" pythonFunction      white              black             bold
