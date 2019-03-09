@@ -58,9 +58,9 @@ Cursor               almostwhite              black
 CursorColumn         almostwhite              black
 CursorLine           almostwhite              black
 CursorLineNr         almostwhite              black
-DiffAdd              almostwhite              black             reverse
-DiffChange           almostwhite              black             reverse
-DiffDelete           almostwhite              black             reverse
+DiffAdd              green                    black             reverse
+DiffChange           yellow                   black             reverse
+DiffDelete           red                      black             reverse
 DiffText             almostwhite              black             bold,reverse
 Directory            almostwhite              black
 EndOfBuffer          almostwhite              black

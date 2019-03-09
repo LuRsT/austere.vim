@@ -4,7 +4,7 @@
 " Maintainer:   Gil Goncalves @lurst
 " Website:      https://github.com/LuRsT/austere.vim
 " License:      MIT License
-" Last Updated: Sun 03 Mar 2019 20:41:57 GMT
+" Last Updated: Sat 09 Mar 2019 07:43:52 GMT
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -34,9 +34,9 @@ hi Cursor ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=N
 hi CursorColumn ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi CursorLine ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi CursorLineNr ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
-hi DiffAdd ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi DiffChange ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi DiffDelete ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi DiffAdd ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi DiffChange ctermfg=222 ctermbg=233 guifg=#f0c674 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi DiffDelete ctermfg=167 ctermbg=233 guifg=#ce5252 guibg=#101010 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffText ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi Directory ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi EndOfBuffer ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
@@ -160,9 +160,9 @@ finish
 " CursorColumn         almostwhite              black
 " CursorLine           almostwhite              black
 " CursorLineNr         almostwhite              black
-" DiffAdd              almostwhite              black             reverse
-" DiffChange           almostwhite              black             reverse
-" DiffDelete           almostwhite              black             reverse
+" DiffAdd              green                    black             reverse
+" DiffChange           yellow                   black             reverse
+" DiffDelete           red                      black             reverse
 " DiffText             almostwhite              black             bold,reverse
 " Directory            almostwhite              black
 " EndOfBuffer          almostwhite              black
