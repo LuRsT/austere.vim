@@ -4,7 +4,7 @@
 " Maintainer:   Gil Goncalves @lurst
 " Website:      https://github.com/LuRsT/austere.vim
 " License:      MIT License
-" Last Updated: Sat 09 Mar 2019 07:43:52 GMT
+" Last Updated: Sat 09 Mar 2019 09:53:30 GMT
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -58,10 +58,10 @@ hi! link QuickFixLine Search
 hi Search ctermfg=100 ctermbg=233 guifg=#8c9440 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi SignColumn ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi SpecialKey ctermfg=254 ctermbg=233 guifg=#e3e3e3 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
-hi SpellBad ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=#ce5252 cterm=NONE gui=NONE
-hi SpellCap ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=#5f819d cterm=NONE gui=NONE
-hi SpellLocal ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=#7c7c7c cterm=NONE gui=NONE
-hi SpellRare ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=#e3e3e3 cterm=NONE,reverse gui=NONE,reverse
+hi SpellBad ctermfg=167 ctermbg=233 guifg=#ce5252 guibg=#101010 guisp=#ce5252 cterm=NONE gui=NONE
+hi SpellCap ctermfg=167 ctermbg=233 guifg=#ce5252 guibg=#101010 guisp=#5f819d cterm=NONE gui=NONE
+hi SpellLocal ctermfg=167 ctermbg=233 guifg=#ce5252 guibg=#101010 guisp=#7c7c7c cterm=NONE gui=NONE
+hi SpellRare ctermfg=254 ctermbg=233 guifg=#e3e3e3 guibg=#101010 guisp=#e3e3e3 cterm=NONE,reverse gui=NONE,reverse
 hi StatusLine ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi StatusLineNC ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi! link StatusLineTerm StatusLine
@@ -184,10 +184,10 @@ finish
 " Search               green                    black
 " SignColumn           almostwhite              black
 " SpecialKey           beige                    black
-" SpellBad             almostwhite              black             s=red
-" SpellCap             almostwhite              black             s=blue
-" SpellLocal           almostwhite              black             s=darkstone
-" SpellRare            almostwhite              black             s=beige reverse
+" SpellBad             red                      black             s=red
+" SpellCap             red                      black             s=blue
+" SpellLocal           red                      black             s=darkstone
+" SpellRare            beige                    black             s=beige reverse
 " StatusLine           almostwhite              black
 " StatusLineNC         almostwhite              black
 " StatusLineTerm    -> StatusLine

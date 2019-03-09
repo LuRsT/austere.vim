@@ -82,10 +82,10 @@ QuickFixLine     ->  Search
 Search               green                    black
 SignColumn           almostwhite              black
 SpecialKey           beige                    black
-SpellBad             almostwhite              black             s=red
-SpellCap             almostwhite              black             s=blue
-SpellLocal           almostwhite              black             s=darkstone
-SpellRare            almostwhite              black             s=beige reverse
+SpellBad             red                      black             s=red
+SpellCap             red                      black             s=blue
+SpellLocal           red                      black             s=darkstone
+SpellRare            beige                    black             s=beige reverse
 StatusLine           almostwhite              black
 StatusLineNC         almostwhite              black
 StatusLineTerm    -> StatusLine
