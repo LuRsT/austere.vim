@@ -102,7 +102,7 @@ WildMenu             almostwhite              black
 # Other conventional group names (see `:help group-name`)
 Boolean           -> Constant
 Character         -> Constant
-Comment              darkstone                none
+Comment              darkstone                none              italic
 Conditional       -> Statement
 Constant             grey                     none              italic
 Define            -> PreProc

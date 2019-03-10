@@ -4,7 +4,7 @@
 " Maintainer:   Gil Goncalves @lurst
 " Website:      https://github.com/LuRsT/austere.vim
 " License:      MIT License
-" Last Updated: Sat 09 Mar 2019 09:53:30 GMT
+" Last Updated: Sun 10 Mar 2019 09:40:07 GMT
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -77,7 +77,7 @@ hi WarningMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cte
 hi WildMenu ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi! link Boolean Constant
 hi! link Character Constant
-hi Comment ctermfg=244 ctermbg=NONE guifg=#7c7c7c guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Comment ctermfg=244 ctermbg=NONE guifg=#7c7c7c guibg=NONE guisp=NONE cterm=NONE,italic gui=NONE,italic
 hi! link Conditional Statement
 hi Constant ctermfg=245 ctermbg=NONE guifg=#8e8e8e guibg=NONE guisp=NONE cterm=NONE,italic gui=NONE,italic
 hi! link Define PreProc
@@ -203,7 +203,7 @@ finish
 " WildMenu             almostwhite              black
 " Boolean           -> Constant
 " Character         -> Constant
-" Comment              darkstone                none
+" Comment              darkstone                none              italic
 " Conditional       -> Statement
 " Constant             grey                     none              italic
 " Define            -> PreProc
