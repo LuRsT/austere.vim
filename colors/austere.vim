@@ -4,7 +4,7 @@
 " Maintainer:   Gil Goncalves @lurst
 " Website:      https://github.com/LuRsT/austere.vim
 " License:      MIT License
-" Last Updated: Sun 24 Mar 2019 10:02:57 GMT
+" Last Updated: Sun 24 Mar 2019 10:21:41 GMT
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -136,6 +136,11 @@ hi pythonAsync ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE ct
 hi pythonEscape ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi pythonBuiltin ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi pythonFunction ctermfg=231 ctermbg=233 guifg=#f7f7f7 guibg=#101010 guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi ALEVirtualTextError ctermfg=167 ctermbg=235 guifg=#ce5252 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+hi ALEVirtualTextWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+hi ALEVirtualTextInfo ctermfg=67 ctermbg=235 guifg=#5f819d guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+hi ALEVirtualTextStyleError ctermfg=167 ctermbg=235 guifg=#ce5252 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+hi ALEVirtualTextStyleWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 finish
 
 " Background: dark
@@ -262,3 +267,8 @@ finish
 " pythonEscape        white              black             bold
 " pythonBuiltin       white              black             bold
 " pythonFunction      white              black             bold
+" ALEVirtualTextError         red              darkgrey
+" ALEVirtualTextWarning       yellow           darkgrey
+" ALEVirtualTextInfo          blue             darkgrey
+" ALEVirtualTextStyleError    red              darkgrey
+" ALEVirtualTextStyleWarning  yellow           darkgrey

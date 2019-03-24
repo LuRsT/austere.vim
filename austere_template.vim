@@ -190,4 +190,10 @@ pythonEscape        white              black             bold
 pythonBuiltin       white              black             bold
 pythonFunction      white              black             bold
 
+ALEVirtualTextError         red              darkgrey
+ALEVirtualTextWarning       yellow           darkgrey
+ALEVirtualTextInfo          blue             darkgrey
+ALEVirtualTextStyleError    red              darkgrey
+ALEVirtualTextStyleWarning  yellow           darkgrey
+
 # }}}
