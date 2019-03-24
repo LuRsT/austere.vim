@@ -73,9 +73,9 @@ MatchParen           almostwhite              black
 ModeMsg              almostwhite              black
 MoreMsg              almostwhite              black
 NonText              beige                     none
-Pmenu                almostwhite              black
-PmenuSbar            almostwhite              black
-PmenuSel             grey                     black
+Pmenu                almostwhite              darkgrey
+PmenuSbar            almostwhite              darkgrey
+PmenuSel             white                    darkgrey
 PmenuThumb           almostwhite              black
 Question             almostwhite              black
 QuickFixLine     ->  Search

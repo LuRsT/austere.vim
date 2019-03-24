@@ -4,7 +4,7 @@
 " Maintainer:   Gil Goncalves @lurst
 " Website:      https://github.com/LuRsT/austere.vim
 " License:      MIT License
-" Last Updated: Sun 10 Mar 2019 09:40:07 GMT
+" Last Updated: Sun 24 Mar 2019 10:02:57 GMT
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -49,9 +49,9 @@ hi MatchParen ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cte
 hi ModeMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi MoreMsg ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi NonText ctermfg=254 ctermbg=NONE guifg=#e3e3e3 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Pmenu ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
-hi PmenuSbar ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
-hi PmenuSel ctermfg=245 ctermbg=233 guifg=#8e8e8e guibg=#101010 guisp=NONE cterm=NONE gui=NONE
+hi Pmenu ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+hi PmenuSbar ctermfg=250 ctermbg=235 guifg=#b9b9b9 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+hi PmenuSel ctermfg=231 ctermbg=235 guifg=#f7f7f7 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 hi PmenuThumb ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi Question ctermfg=250 ctermbg=233 guifg=#b9b9b9 guibg=#101010 guisp=NONE cterm=NONE gui=NONE
 hi! link QuickFixLine Search
@@ -175,9 +175,9 @@ finish
 " ModeMsg              almostwhite              black
 " MoreMsg              almostwhite              black
 " NonText              beige                     none
-" Pmenu                almostwhite              black
-" PmenuSbar            almostwhite              black
-" PmenuSel             grey                     black
+" Pmenu                almostwhite              darkgrey
+" PmenuSbar            almostwhite              darkgrey
+" PmenuSel             white                    darkgrey
 " PmenuThumb           almostwhite              black
 " Question             almostwhite              black
 " QuickFixLine     ->  Search
