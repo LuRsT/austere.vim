@@ -196,4 +196,7 @@ ALEVirtualTextInfo          blue             darkgrey
 ALEVirtualTextStyleError    red              darkgrey
 ALEVirtualTextStyleWarning  yellow           darkgrey
 
+# For https://github.com/machakann/vim-highlightedyank
+HighlightedyankRegion white            beige
+
 # }}}

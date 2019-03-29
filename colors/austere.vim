@@ -4,7 +4,7 @@
 " Maintainer:   Gil Goncalves @lurst
 " Website:      https://github.com/LuRsT/austere.vim
 " License:      MIT License
-" Last Updated: Sun 24 Mar 2019 10:21:41 GMT
+" Last Updated: Fri 29 Mar 2019 12:09:32 GMT
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -141,6 +141,7 @@ hi ALEVirtualTextWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 gui
 hi ALEVirtualTextInfo ctermfg=67 ctermbg=235 guifg=#5f819d guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 hi ALEVirtualTextStyleError ctermfg=167 ctermbg=235 guifg=#ce5252 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
 hi ALEVirtualTextStyleWarning ctermfg=222 ctermbg=235 guifg=#f0c674 guibg=#252525 guisp=NONE cterm=NONE gui=NONE
+hi HighlightedyankRegion ctermfg=231 ctermbg=254 guifg=#f7f7f7 guibg=#e3e3e3 guisp=NONE cterm=NONE gui=NONE
 finish
 
 " Background: dark
@@ -272,3 +273,4 @@ finish
 " ALEVirtualTextInfo          blue             darkgrey
 " ALEVirtualTextStyleError    red              darkgrey
 " ALEVirtualTextStyleWarning  yellow           darkgrey
+" HighlightedyankRegion white            beige
